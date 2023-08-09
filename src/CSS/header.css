@@ -1,0 +1,25 @@
+.headerContainer {
+    display: flex;
+    align-items: center; /* Vertically center-align the content */
+    flex-direction: column; /* Stack the content vertically */
+    height: 20vh; /* Set a minimum height to ensure the header takes up the whole viewport */
+    justify-content: center; /* Horizontally center-align the content */
+    background-color: #f0f0f0; /* Example background color */
+}
+
+.linksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerLink {
+    color: black;
+    transition: color 0.3s ease;
+    margin: 5px 0; /* Add some spacing between the links */
+}
+
+.headerLink:hover {
+    color: red;
+    font-weight: bold;
+}

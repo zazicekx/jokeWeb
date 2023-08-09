@@ -1,0 +1,31 @@
+.notimplemented {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-color: #bab7b7;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  .message {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .homeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1b2631;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homeButton:hover {
+    background-color: #0056b3;
+  }

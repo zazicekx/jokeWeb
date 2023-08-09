@@ -1,0 +1,26 @@
+.jokeButtonContainer {
+    display: flex;
+    align-items: center; /* Vertically center-align the content */
+    flex-direction: column; /* Stack the content vertically */
+    height: 30vh; /* Set a minimum height to ensure the header takes up the whole viewport */
+    justify-content: center; /* Horizontally center-align the content */
+    background-color: #c0a7a7; /* Example background color */
+}
+
+.jokeButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    width: 150px; /* Set a fixed width for the button */
+    text-align: center; /* Center the text horizontally */
+}
+
+.jokeButton:hover {
+    background-color: rgb(38, 149, 110);
+    color: white;
+}
