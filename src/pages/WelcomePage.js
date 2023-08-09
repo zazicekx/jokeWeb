@@ -6,6 +6,8 @@ const WelcomePage = () => {
   const [joke1, setJoke1] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible1, setIsVisible1] = useState(false);
+  const [timer, setTimer] = useState(8000);
+  const [timer1, setTimer1] = useState(8000);
 
   const fetchJoke = async () => {
     try {
@@ -20,11 +22,14 @@ const WelcomePage = () => {
   
       setTimeout(() => {
         setIsVisible(false);
-      }, 8000);
+      }, timer);
     } catch (error) {
       console.error('Error fetching joke:', error);
     }
   };
+  const restart = () => {
+    setTimer(8000)
+  }
 
   const fetchJoke1 = async () => {
     try {
@@ -36,20 +41,24 @@ const WelcomePage = () => {
       const data = await response.json();
       setJoke1(data.joke);
       setIsVisible1(true);
-  
+      
       setTimeout(() => {
         setIsVisible1(false);
-      }, 8000);
+      }, timer1);
     } catch (error) {
       console.error('Error fetching joke:', error);
     }
   };
 
+  const restart1 = () => {
+    setTimer1(8000)
+  }
+
   return (
     <div className="jokeButtonContainer">
-      <button onClick={fetchJoke} className="jokeButton">Get Daddy Joke</button>
+      <button onClick={() => {fetchJoke(); restart(); console.log(timer);}} className="jokeButton">Get Daddy Joke</button>
       {isVisible && <p>{joke}</p>}
-      <button onClick={fetchJoke1} className="jokeButton">Get Joke</button>
+      <button onClick={() => {fetchJoke1(); restart1(); console.log(timer1);}} className="jokeButton">Get Joke</button>
       {isVisible1 && <p>{joke1}</p>}
     </div>
   );
