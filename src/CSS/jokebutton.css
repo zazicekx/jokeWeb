@@ -1,10 +1,10 @@
 .jokeButtonContainer {
     display: flex;
-    align-items: center; /* Vertically center-align the content */
-    flex-direction: column; /* Stack the content vertically */
-    height: 50vh; /* Set a minimum height to ensure the header takes up the whole viewport */
-    justify-content: center; /* Horizontally center-align the content */
-    background-color: #c0a7a7; /* Example background color */
+    align-items: center; 
+    flex-direction: column; 
+    height: 50vh; 
+    justify-content: center; 
+    background-color: #c0a7a7; 
 }
 
 .jokeButton {
@@ -16,8 +16,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 10px;
-    width: 150px; /* Set a fixed width for the button */
-    text-align: center; /* Center the text horizontally */
+    width: 150px;
+    text-align: center; 
 }
 
 .jokeButton:hover {
@@ -25,7 +25,7 @@
     color: white;
 }
 
-/* Styles for the meme modal overlay */
+
 .memeModalOverlay {
     position: fixed;
     top: 0;
@@ -40,8 +40,8 @@
   }
   
   .memeModalContent {
-    width: 400px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
+    width: 400px; 
+    height: 300px; 
     background-color: white;
     border-radius: 8px;
     padding: 20px;
@@ -51,9 +51,9 @@
     justify-content: center;
   }
   
-  /* Styles for the meme modal image */
+  
   .memeModalContent img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-  }
+  } 

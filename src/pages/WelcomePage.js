@@ -28,7 +28,7 @@ const WelcomePage = () => {
   const startTimer2 = (setVisibleFunction) => {
     return setTimeout(() => {
       setVisibleFunction(false);
-    }, 8000);
+    }, 10000);
   };
 
 
