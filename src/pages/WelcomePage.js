@@ -22,6 +22,7 @@ const WelcomePage = () => {
     }, 8000);
   };
 
+
   const fetchJoke = async () => {
     try {
       const response = await fetch('https://icanhazdadjoke.com/', {
@@ -36,6 +37,7 @@ const WelcomePage = () => {
       clearTimeout(timerId); // Clear the previous timer
       const newTimerId = startTimer(setIsVisible); // Start a new timer
       setTimerId(newTimerId);
+
     } catch (error) {
       console.error('Error fetching joke:', error);
     }
@@ -52,14 +54,17 @@ const WelcomePage = () => {
       setJoke1(data.joke);
       setIsVisible1(true);
 
+
       clearTimeout(timerId1); // Clear the previous timer
       const newTimerId = startTimer1(setIsVisible1); // Start a new timer
       setTimerId1(newTimerId);
+
     } catch (error) {
       console.error('Error fetching joke:', error);
     }
   };
 
+ 
   return (
     <div className="jokeButtonContainer">
       <button onClick={fetchJoke} className="jokeButton">Get Daddy Joke</button>
