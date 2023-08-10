@@ -8,10 +8,10 @@ const WelcomePage = () => {
   const [joke2, setJoke2] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible1, setIsVisible1] = useState(false);
-  const [isVisible2, setIsVisible2] = useState(false);
   const [timerId, setTimerId] = useState(null);
   const [timerId1, setTimerId1] = useState(null);
   const [timerId2, setTimerId2] = useState(null);
+  const [isMemeModalVisible, setIsMemeModalVisible] = useState(false);
 
   const startTimer = (setVisibleFunction) => {
     return setTimeout(() => {
@@ -82,15 +82,13 @@ const WelcomePage = () => {
       });
       const data = await response.json();
       setJoke2(data.url);
-      setIsVisible2(true);
-
-
+      setIsMemeModalVisible(true);
+  
       clearTimeout(timerId2); // Clear the previous timer
-      const newTimerId = startTimer2(setIsVisible2); // Start a new timer
+      const newTimerId = startTimer2(() => setIsMemeModalVisible(false)); // Start a new timer
       setTimerId2(newTimerId);
-
     } catch (error) {
-      console.error('Error fetching joke:', error);
+      console.error('Error fetching meme:', error);
     }
   };
 
@@ -102,7 +100,13 @@ const WelcomePage = () => {
       <button onClick={fetchJoke1} className="jokeButton">Get Joke</button>
       {isVisible1 && <p>{joke1}</p>}
       <button onClick={fetchJoke2} className="jokeButton">Get MeMe</button>
-      {isVisible2 && <img src={joke2} alt="Logo" />}
+  {isMemeModalVisible && (
+    <div className="memeModalOverlay" onClick={() => setIsMemeModalVisible(false)}>
+      <div className="memeModalContent">
+        <img src={joke2} alt="Meme" />
+      </div>
+    </div>
+  )}
     </div>
   );
 };
