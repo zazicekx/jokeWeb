@@ -4,7 +4,11 @@
     flex-direction: column; 
     height: 50vh; 
     justify-content: center; 
-    background-color: #c0a7a7; 
+    background-color: #ececec; 
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
 }
 
 .jokeButton {
@@ -17,7 +21,8 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     border-radius: 10px;
     width: 150px;
-    text-align: center; 
+    text-align: center;
+    margin-top: 3vh; 
 }
 
 .jokeButton:hover {

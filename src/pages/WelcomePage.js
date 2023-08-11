@@ -34,9 +34,10 @@ const WelcomePage = () => {
 
   const fetchJoke = async () => {
     try {
-      const response = await fetch('https://icanhazdadjoke.com/', {
+      const response = await fetch('https://v2.jokeapi.dev/joke/Pun?type=single', {
         headers: {
           Accept: 'application/json',
+          'X-Api-Key': 'Spa8XXDE1dqkDJDOTlGXUQ==2k1Oq9DejYYJrFYd'
         },
       });
       const data = await response.json();
@@ -54,7 +55,7 @@ const WelcomePage = () => {
 
   const fetchJoke1 = async () => {
     try {
-      const response = await fetch('https://v2.jokeapi.dev/joke/Programming,Dark?type=single', {
+      const response = await fetch('https://v2.jokeapi.dev/joke/Dark?type=single', {
         headers: {
           Accept: 'application/json',
         },
@@ -75,13 +76,13 @@ const WelcomePage = () => {
 
   const fetchJoke2 = async () => {
     try {
-      const response = await fetch('https://meme-api.com/gimme', {
+      const response = await fetch('https://api.thecatapi.com/v1/images/search', {
         headers: {
           Accept: 'application/json',
         },
       });
       const data = await response.json();
-      setJoke2(data.url);
+      setJoke2(data[0].url);
       setIsMemeModalVisible(true);
   
       clearTimeout(timerId2); // Clear the previous timer
@@ -97,9 +98,9 @@ const WelcomePage = () => {
     <div className="jokeButtonContainer">
       <button onClick={fetchJoke} className="jokeButton">Get Daddy Joke</button>
       {isVisible && <p>{joke}</p>}
-      <button onClick={fetchJoke1} className="jokeButton">Get Joke</button>
+      <button onClick={fetchJoke1} className="jokeButton">Get Dark joke</button>
       {isVisible1 && <p>{joke1}</p>}
-      <button onClick={fetchJoke2} className="jokeButton">Get MeMe</button>
+      <button onClick={fetchJoke2} className="jokeButton">Get cat picture</button>
   {isMemeModalVisible && (
     <div className="memeModalOverlay" onClick={() => setIsMemeModalVisible(false)}>
       <div className="memeModalContent">
