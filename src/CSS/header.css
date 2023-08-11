@@ -11,10 +11,12 @@
 .linksContainer {
     display: flex; /* Use flexbox to arrange items horizontally */
     justify-content: flex-start; /* Align items to the left side */
+    background-color: #4f4444;
 }
 
 .headerLink {
     margin-right: 20px; /* Add margin between links as needed */
     text-decoration: none; /* Remove underline from links */
     color: white; /* Set link color as needed */
+    background-color: #4f4444;
 }

@@ -14,8 +14,8 @@ function Header() {
                 <Link className="headerLink" to="/register">
                     Register
                 </Link>
-                <Link className="headerLink" to="/moreJokes">
-                    moreJokes
+                <Link className="headerLink" to="/MoreJokes">
+                    MoreJokes
                 </Link>
                 <Link className="headerLink" to="/terms&cond">
                     Terms and Conditions

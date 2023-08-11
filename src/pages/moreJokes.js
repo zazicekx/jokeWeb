@@ -1,7 +1,7 @@
 import 'bootstrap'
 import { useState } from "react";
 
-const Bootstrap = () => {
+const MoreJokes = () => {
   const [joke, setJoke] = useState('');
   const [isVisible, setIsVisible] = useState(false);
   const [timerId, setTimerId] = useState(null);
@@ -41,4 +41,4 @@ const Bootstrap = () => {
   );
 }
 
-export default Bootstrap
+export default MoreJokes
