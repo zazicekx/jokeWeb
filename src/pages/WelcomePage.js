@@ -101,12 +101,12 @@ const WelcomePage = () => {
       <button onClick={fetchJoke1} className="jokeButton">Get Dark joke</button>
       {isVisible1 && <p>{joke1}</p>}
       <button onClick={fetchJoke2} className="jokeButton">Get cat picture</button>
-  {isMemeModalVisible && (
-    <div className="memeModalOverlay" onClick={() => setIsMemeModalVisible(false)}>
-      <div className="memeModalContent">
-        <img src={joke2} alt="Meme" />
-      </div>
-    </div>
+      {isMemeModalVisible && (
+        <div className="memeModalOverlay" onClick={() => setIsMemeModalVisible(false)}>
+          <div className="memeModalContent">
+            <img src={joke2} alt="Meme" />
+          </div>
+        </div>
   )}
     </div>
   );
