@@ -11,7 +11,9 @@
     margin-right: 2vh;
     margin-bottom: 2vh;
 }
-
+.container {
+    background-color: #ececec;
+}
 .companyText {
     margin-right: 2vh;
     background-color: #ececec;
