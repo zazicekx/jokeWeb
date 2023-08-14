@@ -1,4 +1,6 @@
 .headerContainer {
+    display: flex;
+    justify-content: flex-start;
     background-color: #4f4444; /* Set the background color as needed */
     color: white; /* Set the font color as needed */
     padding: 20px; /* Add padding as needed */
