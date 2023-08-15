@@ -97,9 +97,9 @@ const WelcomePage = () => {
   return (
     <div className="jokeButtonContainer">
       <button onClick={fetchJoke} className="jokeButton">Get Daddy Joke</button>
-      {isVisible && <p>{joke}</p>}
+      {isVisible && <p className="jokeText">{joke}</p>}
       <button onClick={fetchJoke1} className="jokeButton">Get Dark joke</button>
-      {isVisible1 && <p>{joke1}</p>}
+      {isVisible1 && <p className="jokeText">{joke1}</p>}
       <button onClick={fetchJoke2} className="jokeButton">Get cat picture</button>
       {isMemeModalVisible && (
         <div className="memeModalOverlay" onClick={() => setIsMemeModalVisible(false)}>
@@ -107,7 +107,8 @@ const WelcomePage = () => {
             <img src={joke2} alt="Meme" />
           </div>
         </div>
-  )}
+        )
+      }
     </div>
   );
 };

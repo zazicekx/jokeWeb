@@ -25,6 +25,9 @@
     margin-top: 3vh; 
 }
 
+.jokeText{
+  background-color: #ececec; 
+}
 .jokeButton:hover {
     background-color: rgb(38, 149, 110);
     color: white;
