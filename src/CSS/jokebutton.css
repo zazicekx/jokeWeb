@@ -2,7 +2,7 @@
     display: flex;
     align-items: center; /* Vertically center-align the content */
     flex-direction: column; /* Stack the content vertically */
-    height: 100vh; /* Set a minimum height to ensure the header takes up the whole viewport */
+    height: 50vh; /* Set a minimum height to ensure the header takes up the whole viewport */
     justify-content: center; /* Horizontally center-align the content */
     background-color: #c0a7a7; /* Example background color */
 }
