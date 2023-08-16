@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+    height: 5vh; 
+    justify-content: right; 
+    background-color: #ececec; 
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-bottom: 2vh;
+}
+.container {
+    background-color: #ececec;
+}
+.companyText {
+    margin-right: 2vh;
+    background-color: #ececec;
+}

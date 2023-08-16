@@ -16,12 +16,8 @@
 }
 
 .headerLink {
-    color: black;
-    transition: color 0.3s ease;
-    margin: 5px 0; /* Add some spacing between the links */
-}
-
-.headerLink:hover {
-    color: red;
-    font-weight: bold;
+    margin-right: 20px; /* Add margin between links as needed */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set link color as needed */
+    background-color: #4f4444;
 }

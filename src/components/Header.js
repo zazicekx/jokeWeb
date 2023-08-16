@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import "../CSS/header.css"
 
 function Header() {
@@ -14,8 +14,8 @@ function Header() {
                 <Link className="headerLink" to="/register">
                     Register
                 </Link>
-                <Link className="headerLink" to="/products">
-                    Products
+                <Link className="headerLink" to="/MoreJokes">
+                    MoreJokes
                 </Link>
                 <Link className="headerLink" to="/terms&cond">
                     Terms and Conditions
