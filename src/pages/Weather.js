@@ -3,9 +3,9 @@ import "../CSS/weather.css"
 
 const Weather = () => {
 
-   const [data, setData] = useState('');
+   const [dataPrague, setDataPrague] = useState('');
 
-   const fetchData = async () => {
+   const fetchDataPrague = async () => {
     try {
       const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=50.088&longitude=14.4208&hourly=temperature_2m&current_weather=true', {
         headers: {
@@ -13,7 +13,7 @@ const Weather = () => {
         },
       });
       const data = await response.json();
-      setData(data.current_weather);
+      setDataPrague(data.current_weather);
  
 
     } catch (error) {
@@ -21,16 +21,41 @@ const Weather = () => {
     }
    };
 
+   const [dataKosice, setDataKosice] = useState('');
+
+   const fetchDataKosice = async () => {
+    try {
+      const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.7139&longitude=21.2581&hourly=temperature_2m&current_weather=true', {
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+      const data = await response.json();
+      setDataKosice(data.current_weather);
+ 
+
+    } catch (error) {
+      console.error('Error fetching joke:', error);
+    }
+   };
 
   return (
       <div className="weatherButtonContainer">
-      <button onClick={fetchData} className="weatherButton">Prague actual Weather</button>
-      {data && (
+      <button onClick={fetchDataPrague} className="weatherButton">Prague actual Weather</button>
+      {dataPrague && (
         <p className="weatherText">
-          Temperature: {data.temperature}°C, Wind Speed: {data.windspeed} m/s
+          Temperature: {dataPrague.temperature}°C, Wind Speed: {dataPrague.windspeed} m/s
+        </p>
+      )}
+      <button onClick={fetchDataKosice} className="weatherButton">Kosice actual Weather</button>
+      {dataPrague && (
+        <p className="weatherText">
+          Temperature: {dataKosice.temperature}°C, Wind Speed: {dataKosice.windspeed} m/s
         </p>
       )}
     </div>
+
+
   );
 }
 

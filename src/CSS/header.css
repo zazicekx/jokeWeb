@@ -1,7 +1,7 @@
 .headerContainer {
     display: flex;
     flex-wrap: wrap;
-    align-items: space-between; /* Vertically center-align the content */
+    align-items: flex-start; /* Vertically center-align the content */
     flex-direction: row; /* Stack the content vertically */
     height: 20vh; /* Set a minimum height to ensure the header takes up the whole viewport */
     justify-content: center; /* Horizontally center-align the content */
@@ -11,7 +11,7 @@
 .linksContainer {
     display: flex;
     flex-direction: row;
-    align-items: space-between;
+    align-items: flex-start;
     padding: 1vh;
 }
 
