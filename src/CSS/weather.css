@@ -1,0 +1,30 @@
+.weatherButtonContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    background-color: #ececec;
+    border-radius: 10px;
+    margin-top: 2vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+}
+
+.weatherButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.weatherText {
+    background-color: #ececec;
+}

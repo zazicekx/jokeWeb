@@ -16,13 +16,13 @@ const WelcomePage = () => {
   const startTimer = (setVisibleFunction) => {
     return setTimeout(() => {
       setVisibleFunction(false);
-    }, 8000);
+    }, 12000);
   };
 
   const startTimer1 = (setVisibleFunction) => {
     return setTimeout(() => {
       setVisibleFunction(false);
-    }, 8000);
+    }, 12000);
   };
 
   const startTimer2 = (setVisibleFunction) => {

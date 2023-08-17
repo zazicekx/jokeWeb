@@ -17,8 +17,8 @@ function Header() {
                 <Link className="headerLink" to="/MoreJokes">
                     MoreJokes
                 </Link>
-                <Link className="headerLink" to="/terms&cond">
-                    Terms and Conditions
+                <Link className="headerLink" to="/Weather">
+                    Weather
                 </Link>
                 <Link className="headerLink" to="/about">
                     About
