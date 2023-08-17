@@ -1,4 +1,3 @@
-import 'bootstrap'
 import { useState } from "react";
 
 const MoreJokes = () => {
